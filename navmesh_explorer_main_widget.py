@@ -129,7 +129,7 @@ class NavmeshExplorerMain(QtWidgets.QWidget):
             if self._graph_aspect > canvas_width / canvas_height:
                 # use x size for drawings, add spaces to y
                 x_shift = 0
-                y_shift = (canvas_height - canvas_width * self._graph_aspect) / 2
+                y_shift = (canvas_height - canvas_width / self._graph_aspect) / 2
             else:
                 # add blank spaces to x
                 y_shift = 0

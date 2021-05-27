@@ -8,7 +8,7 @@ class PointTransformer():
         self._height = height
 
         self._x_coeff = self._height * self._aspect if self._aspect <= self._width / self._height else self._width
-        self._y_coeff = self._height if self._aspect <= self._width / self._height else self._width * self._aspect
+        self._y_coeff = self._height if self._aspect <= self._width / self._height else self._width / self._aspect
 
     def transform(self, point):
         return ((point[0] - self._min_corner[0]) * self._x_coeff / (self._max_corner[0] - self._min_corner[0]) + self._shift[0],
